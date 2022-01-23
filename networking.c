@@ -79,7 +79,6 @@ int server_connect(int sd) {
   sock_size = sizeof(client_address);
   client_socket = accept(sd, (struct sockaddr *)&client_address, &sock_size);
   error_check(client_socket, "server accept");
-  close(client_socket);
 
   return client_socket;
 }
